@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/colortracktextview" />
+            <option value="$PROJECT_DIR$/copyqqsportsteps" />
+            <option value="$PROJECT_DIR$/listdatascreenview" />
+            <option value="$PROJECT_DIR$/loading_view" />
+            <option value="$PROJECT_DIR$/myflowlayout" />
+            <option value="$PROJECT_DIR$/progressbar" />
+            <option value="$PROJECT_DIR$/qqsteps" />
+            <option value="$PROJECT_DIR$/ratingbar" />
+            <option value="$PROJECT_DIR$/redpackageview" />
+            <option value="$PROJECT_DIR$/splashview" />
+            <option value="$PROJECT_DIR$/threedotloadingview" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

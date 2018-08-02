@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  reference  资源drawble  -->
+    <declare-styleable name="TextView">
+        <attr name="dobiText" format="string"></attr>
+        <attr name="dobiTextColor" format="color" />
+        <attr name="dobiTextSize" format="dimension" />
+        <attr name="dobiMaxLength" format="integer"/>
+        <attr name="dobiBackGround" format="reference|color"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/View_Day1.iml" filepath="$PROJECT_DIR$/View_Day1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/colortracktextview/colortracktextview.iml" filepath="$PROJECT_DIR$/colortracktextview/colortracktextview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/copyqqsportsteps/copyqqsportsteps.iml" filepath="$PROJECT_DIR$/copyqqsportsteps/copyqqsportsteps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listdatascreenview/listdatascreenview.iml" filepath="$PROJECT_DIR$/listdatascreenview/listdatascreenview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loading_view/loading_view.iml" filepath="$PROJECT_DIR$/loading_view/loading_view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myflowlayout/myflowlayout.iml" filepath="$PROJECT_DIR$/myflowlayout/myflowlayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/progressbar/progressbar.iml" filepath="$PROJECT_DIR$/progressbar/progressbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qqsteps/qqsteps.iml" filepath="$PROJECT_DIR$/qqsteps/qqsteps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ratingbar/ratingbar.iml" filepath="$PROJECT_DIR$/ratingbar/ratingbar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redpackageview/redpackageview.iml" filepath="$PROJECT_DIR$/redpackageview/redpackageview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/splashview/splashview.iml" filepath="$PROJECT_DIR$/splashview/splashview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threedotloadingview/threedotloadingview.iml" filepath="$PROJECT_DIR$/threedotloadingview/threedotloadingview.iml" />
+    </modules>
+  </component>
+</project>
