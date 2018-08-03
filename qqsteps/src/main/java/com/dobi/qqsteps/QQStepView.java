@@ -159,7 +159,7 @@ public class QQStepView extends View {
         //得到绘制文字的起始位置
         int dx = getWidth()/2 -textBounds.width()/2;
 
-        // 基线 baseLine
+        // 基线 baseLine ------固定写法
         Paint.FontMetricsInt  fontMetrics = mTextPaint.getFontMetricsInt();
         int dy = (fontMetrics.bottom - fontMetrics.top)/2 - fontMetrics.bottom;
         int baseLine = getHeight()/2 + dy;
