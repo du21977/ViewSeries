@@ -9,4 +9,7 @@
         <attr name="dobiMaxLength" format="integer"/>
         <attr name="dobiBackGround" format="reference|color"/>
     </declare-styleable>
+
+
+    <!--还可以自定义枚举，例如TextView的inputType-->
 </resources>

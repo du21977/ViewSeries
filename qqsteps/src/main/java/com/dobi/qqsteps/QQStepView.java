@@ -23,10 +23,15 @@ public class QQStepView extends View {
 //    private  int mStepTextSize;
 //    private int mStepTextColor ;
 
+    //外圆颜色
     private int mOuterColor = Color.RED;
+    //里圆颜色
     private int mInnerColor = Color.BLUE;
+    //圆边宽度
     private int mBorderWidth = 20;// 20px
+    //字体大小
     private int mStepTextSize;
+    //字体颜色
     private int mStepTextColor;
 
     private Paint mOutPaint,mInnerPaint,mTextPaint;
@@ -93,6 +98,11 @@ public class QQStepView extends View {
     }
 
 
+    /**
+     * 对于View来说，就是重置宽高
+     * @param widthMeasureSpec
+     * @param heightMeasureSpec
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -125,13 +135,14 @@ public class QQStepView extends View {
 //        //
 //        canvas.drawArc(rectF,135,270,false,mOutPaint);
 
+        //左上右下  -----因为边缘，所以半径并不等于getWidth
         RectF rectF = new RectF(mBorderWidth/2,mBorderWidth/2
                 ,getWidth()-mBorderWidth/2,getHeight()-mBorderWidth/2);
         // 研究研究
-        //从135度开始，画270度
+        //从135度开始画，画270度   false表示是否是与圆心相连--扇形
         canvas.drawArc(rectF,135,270,false,mOutPaint);
 
-        //6.2 画内圆弧
+        //6.2 画内圆弧-------是外圆的一定比例
         //这里角度不能写死，动态递增的，所以按比例
         if(mStepMax ==0 ) return;
         //当前步数除以最大步数,必须转换float

@@ -12,10 +12,19 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 
 /**
  * Created by Administrator on 2018/4/19.
  */
+
+//如果extends LinearLayout不会触发onDraw方法
+//public class TextView extends LinearLayout 下面可以解决这个不会触发onDraw方法的问题
+/*
+    1.重写dispatchDraw()
+            2.可以背景透明的背景
+            setBackgroundColor(Color.TRANSPARENT);
+            3. setWillNotDraw(false);*/
 
 public class TextView extends View {
 
@@ -55,7 +64,8 @@ public class TextView extends View {
 
         mText = array.getString(R.styleable.TextView_dobiText);
         mTextColor = array.getColor(R.styleable.TextView_dobiTextColor, mTextColor);
-        // 15 15px 15sp
+        // 15 15px 15sp    sp2px相当于传的sp大小
+        //getDimensionPixelSize  系统TextView就是这么调的
         mTextSize = array.getDimensionPixelSize(R.styleable.TextView_dobiTextSize,sp2px(mTextSize));
 
         // 回收
@@ -69,9 +79,9 @@ public class TextView extends View {
         mPaint.setColor(mTextColor);
 
         //下面是继承LinearLayout是设置这个会执行onDraw方法，否则不会执行
+        //setWillNotDraw(false);
         //  默认给一个背景
         // setBackgroundColor(Color.TRANSPARENT);
-        //setWillNotDraw(false);
     }
 
     private int sp2px(int sp) {
@@ -85,6 +95,7 @@ public class TextView extends View {
 
 
 
+        /*
         // 布局的宽高都是由这个方法指定
         // 指定控件的宽高，需要测量
         // 获取宽高的模式
@@ -99,6 +110,7 @@ public class TextView extends View {
             // 计算的宽度 与 字体的长度有关  与字体的大小  用画笔来测量
             Rect bounds = new Rect();
             // 获取文本的Rect
+            //(String text, int start, int end, Rect bounds)
             mPaint.getTextBounds(mText,0,mText.length(),bounds);
             width = bounds.width() + getPaddingLeft() +getPaddingRight();
         }
@@ -113,8 +125,31 @@ public class TextView extends View {
             height = bounds.height() + getPaddingTop() + getPaddingBottom();
         }
 
-        // 设置控件的宽高
+        //resolveSize()
+
+        // 设置控件的宽高---只是size 没有mode
         setMeasuredDimension(width,height);
+        */
+
+        //宽高直接用系统自带的resolveSize，就不用管模式了,因为resolveSize里面自己判断了
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        Rect bounds = new Rect();
+        // 获取文本的Rect
+        //(String text, int start, int end, Rect bounds)
+        mPaint.getTextBounds(mText,0,mText.length(),bounds);
+        int width = bounds.width() + getPaddingLeft() +getPaddingRight();
+
+        Rect bounds1 = new Rect();
+        // 获取文本的Rect
+        mPaint.getTextBounds(mText,0,mText.length(),bounds1);
+       int height = bounds1.height() + getPaddingTop() + getPaddingBottom();
+
+        setMeasuredDimension(resolveSize(width,widthMeasureSpec),resolveSize(height,heightMeasureSpec));
+
+
+
+
     }
 
 
@@ -139,7 +174,7 @@ public class TextView extends View {
         int baseLine = getHeight()/2 + dy;
         //int x = getPaddingLeft();
 
-        //x 是起始点 y是基线
+        //mText是字符串,x 是起始点 y是基线
         canvas.drawText(mText,0,baseLine,mPaint);
     }
 

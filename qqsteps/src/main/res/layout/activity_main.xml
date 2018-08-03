@@ -10,8 +10,8 @@
 
     <com.dobi.qqsteps.QQStepView
         android:id="@+id/step_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:outerColor="@color/colorPrimary"
         app:innerColor="@color/colorAccent"
         app:borderWith="20dp"

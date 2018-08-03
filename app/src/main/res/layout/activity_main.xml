@@ -12,9 +12,9 @@
     <com.dobi.view_day1.TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:dobiText="haha"
+        app:dobiText="湖北老杜"
         app:dobiTextColor="#ff0000"
-        app:dobiTextSize="14sp"
+        app:dobiTextSize="38sp"
 
         android:padding="10dp"
 
