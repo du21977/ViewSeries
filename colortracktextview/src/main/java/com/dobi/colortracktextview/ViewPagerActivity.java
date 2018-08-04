@@ -14,7 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ *  ViewPager的Tab标签字体变色
+ *  Tab标签没有用TabLayout用的LinerLayout,往其中添加自己的子布局，并且加入List,然后根据不同的page选择不同的tab
  */
 public class ViewPagerActivity extends AppCompatActivity {
     private String[] items = {"直播", "推荐", "视频", "图片", "段子", "精华"};

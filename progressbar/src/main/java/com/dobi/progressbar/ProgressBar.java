@@ -46,10 +46,11 @@ public class ProgressBar extends View {
     public ProgressBar(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        // 获取自定义属性
+        // 获取自定义属性  ----不要忘记attrs
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ProgressBar);
         mInnerBackground = array.getColor(R.styleable.ProgressBar_innerBackground, mInnerBackground);
         mOuterBackground = array.getColor(R.styleable.ProgressBar_outerBackground, mOuterBackground);
+        //getDimension得到是浮点数据，getDimensionPixelSize是int数据
         mRoundWidth = (int) array.getDimension(R.styleable.ProgressBar_roundWidth, dip2px(10));
         mProgressTextSize = array.getDimensionPixelSize(R.styleable.ProgressBar_progressTextSize,
                 sp2px(mProgressTextSize));

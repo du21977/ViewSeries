@@ -53,6 +53,7 @@ public class ColorTrackTextView extends TextView{
         int originColor = array.getColor(R.styleable.ColorTrackTextView_originColor, getTextColors().getDefaultColor());
         int changeColor = array.getColor(R.styleable.ColorTrackTextView_changeColor, getTextColors().getDefaultColor());
 
+        //.根据颜色获取画笔
         mOriginPaint = getPaintByColor(originColor);
         mChangePaint = getPaintByColor(changeColor);
 
@@ -79,7 +80,7 @@ public class ColorTrackTextView extends TextView{
     // 利用clipRect的API 可以裁剪  左边用一个画笔去画  右边用另一个画笔去画  不断的改变中间值
     @Override
     protected void onDraw(Canvas canvas) {
-        //不继承父类，自己实现，我们自己来画
+        //不继承父类(TextView)，自己实现，我们自己来画----不然会画字画2遍---文字就加粗了
         //super.onDraw(canvas);
 
         //left top right bottom
@@ -146,8 +147,6 @@ public class ColorTrackTextView extends TextView{
         canvas.drawText(text, x, baseLine, paint);// 这么画其实还是只有一种颜色
         //释放画布
         canvas.restore();
-
-
 
     }
 

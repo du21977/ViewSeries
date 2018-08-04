@@ -60,6 +60,8 @@ public class RatingBar extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        //下面是wrap_content来处理  按道理是要resolveSize()的，这里简化喽
         // 高度  一张图片的高度， 自己去实现 padding  + 加上间隔
         int height = mStarFocusBitmap.getHeight();
         int width = mStarFocusBitmap.getWidth() * mGradeNumber;
@@ -76,6 +78,7 @@ public class RatingBar extends View {
             // 结合第二个步骤 触摸的时候mCurrentGrade值是不断变化
             if(mCurrentGrade>i){// 1  01
                 // 当前分数之前,有焦点的
+                //  left------top
                 canvas.drawBitmap(mStarFocusBitmap, x, 0, null);
             }else{
                 //没有焦点的
