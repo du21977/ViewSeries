@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/colortracktextview/colortracktextview.iml" filepath="$PROJECT_DIR$/colortracktextview/colortracktextview.iml" />
       <module fileurl="file://$PROJECT_DIR$/copyqqsportsteps/copyqqsportsteps.iml" filepath="$PROJECT_DIR$/copyqqsportsteps/copyqqsportsteps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/letterside/letterside.iml" filepath="$PROJECT_DIR$/letterside/letterside.iml" />
       <module fileurl="file://$PROJECT_DIR$/listdatascreenview/listdatascreenview.iml" filepath="$PROJECT_DIR$/listdatascreenview/listdatascreenview.iml" />
       <module fileurl="file://$PROJECT_DIR$/loading_view/loading_view.iml" filepath="$PROJECT_DIR$/loading_view/loading_view.iml" />
       <module fileurl="file://$PROJECT_DIR$/myflowlayout/myflowlayout.iml" filepath="$PROJECT_DIR$/myflowlayout/myflowlayout.iml" />

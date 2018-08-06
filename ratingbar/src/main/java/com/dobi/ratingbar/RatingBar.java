@@ -119,6 +119,6 @@ public class RatingBar extends View {
                 invalidate();// onDraw()  尽量减少onDraw()的调用，目前是不断调用，怎么减少？
                 break;
         }
-        return true;// onTouch 后面看源码（2天,3个小时） false 不消费 第一次 DOWN false DOWN以后的事件是进不来的
+        return true;// onTouch 后面看源码（2天,3个小时） 默认false 不消费， 第一次 DOWN 后 返回false的话，就说明不消费，下次 DOWN以后的事件是进不来的
     }
 }
