@@ -51,6 +51,7 @@ public class LoveLayout extends RelativeLayout {
         mRandom = new Random();
         mImageRes = new int[]{R.drawable.pl_blue, R.drawable.pl_red, R.drawable.pl_yellow};
 
+        //得到心形图片的宽高
         Drawable drawable = ContextCompat.getDrawable(context, R.drawable.pl_blue);
         mDrawableWidth = drawable.getIntrinsicWidth();
         mDrawableHeight = drawable.getIntrinsicHeight();
@@ -113,13 +114,15 @@ public class LoveLayout extends RelativeLayout {
     }
 
     public Animator getBezierAnimator(final ImageView iv) {
-        // 怎么确定四个点
+        // 怎么确定四个点 ----0和3是确定的点，起始点和终止点------1和2是控制点
         PointF point0 = new PointF(mWidth / 2 - mDrawableWidth / 2, mHeight - mDrawableHeight);
         // 确保 p2 点的 y 值 一定要大于 p1 点的 y 值
         PointF point1 = getPoint(1);
         PointF point2 = getPoint(2);
+        //终止点
         PointF point3 = new PointF(mRandom.nextInt(mWidth) - mDrawableWidth, 0);
 
+        //估值器
         LoveTypeEvaluator typeEvaluator = new LoveTypeEvaluator(point1, point2);
         // ofFloat  第一个参数 LoveTypeEvaluator 第二个参数 p0, 第三个是 p3
         ValueAnimator bezierAnimator = ObjectAnimator.ofObject(typeEvaluator, point0, point3);
