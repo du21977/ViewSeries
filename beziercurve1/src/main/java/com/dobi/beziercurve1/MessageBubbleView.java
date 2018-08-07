@@ -177,16 +177,21 @@ public class MessageBubbleView extends View {
         // 两个点
         PointF controlPoint = getControlPoint();
         // 画了第一条  第一个点（控制点,两个圆心的中心点），终点
-        bezeierPath.quadTo(controlPoint.x,controlPoint.y,p1x,p1y);
+        bezeierPath.quadTo(controlPoint.x,controlPoint.y,p1x,p1y);  //绘制贝塞尔曲线，第一个点控制点，第二个点终点
 
         // 画第二条
-        bezeierPath.lineTo(p2x,p2y); // 链接到
-        bezeierPath.quadTo(controlPoint.x,controlPoint.y,p3x,p3y);
+        bezeierPath.lineTo(p2x,p2y); // p1链接到p2
+        bezeierPath.quadTo(controlPoint.x,controlPoint.y,p3x,p3y); //绘制贝塞尔曲线，第一个点控制点，第二个点终点
         bezeierPath.close();
 
         return bezeierPath;
     }
 
+
+    /**
+     * 控制点----这里选择两个点的中点
+     * @return
+     */
     public PointF getControlPoint() {
         return new PointF((mDragPoint.x+mFixationPoint.x)/2,(mDragPoint.y+mFixationPoint.y)/2);
     }
