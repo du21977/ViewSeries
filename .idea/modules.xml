@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/letterside/letterside.iml" filepath="$PROJECT_DIR$/letterside/letterside.iml" />
       <module fileurl="file://$PROJECT_DIR$/listdatascreenview/listdatascreenview.iml" filepath="$PROJECT_DIR$/listdatascreenview/listdatascreenview.iml" />
       <module fileurl="file://$PROJECT_DIR$/loading_view/loading_view.iml" filepath="$PROJECT_DIR$/loading_view/loading_view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/md_demo/md_demo.iml" filepath="$PROJECT_DIR$/md_demo/md_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/myflowlayout/myflowlayout.iml" filepath="$PROJECT_DIR$/myflowlayout/myflowlayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/progressbar/progressbar.iml" filepath="$PROJECT_DIR$/progressbar/progressbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/qqsteps/qqsteps.iml" filepath="$PROJECT_DIR$/qqsteps/qqsteps.iml" />
