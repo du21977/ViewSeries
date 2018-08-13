@@ -14,6 +14,9 @@ import android.view.ViewGroup;
 
 /**
  * Created by hcDarren on 2017/7/10.
+ * https://www.jianshu.com/p/f3c81cf485e5
+ *
+ * 自定义Behavior
  */
 
 public class BehaviorActivity extends AppCompatActivity {

@@ -1,6 +1,7 @@
 package com.lianying.md2;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewCompat;
@@ -22,6 +23,14 @@ public class TanslationBehavior extends FloatingActionButton.Behavior{
     public TanslationBehavior(Context context,AttributeSet attrs){
         super(context, attrs);
     }
+
+    @Override
+    public void onAttachedToLayoutParams(@NonNull CoordinatorLayout.LayoutParams lp) {
+
+        //TanslationBehavior 刚刚创建完毕 会调用这个方法
+        super.onAttachedToLayoutParams(lp);
+    }
+
     // 关注垂直滚动 ，而且向上的时候是出来，向下是隐藏
     @Override
     public boolean onStartNestedScroll(CoordinatorLayout coordinatorLayout, FloatingActionButton child, View directTargetChild, View target, int nestedScrollAxes) {
