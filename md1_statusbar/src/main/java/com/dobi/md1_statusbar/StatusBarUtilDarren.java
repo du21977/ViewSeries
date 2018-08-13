@@ -13,7 +13,7 @@ import android.view.WindowManager;
  * Created by hcDarren on 2017/7/9.
  */
 
-public class StatusBarUtil {
+public class StatusBarUtilDarren {
     /**
      * 为我们的 activity 的状态栏设置颜色
      * @param activity
@@ -39,18 +39,17 @@ public class StatusBarUtil {
             view.setBackgroundColor(color);
 
             //  android:fitsSystemWindows="true" 每个布局都要写
-            //  DecorView是一个 FrameLayout 布局 , 会加载一个系统的布局（LinearLayout） ,
-            // 在系统布局中会有一个 id 为 android.R.id.content 这布局是（RelativeLayout）
-
-            //  http://www.jianshu.com/p/531d1168b3ee
             ViewGroup decorView = (ViewGroup) activity.getWindow().getDecorView();
             decorView.addView(view);
 
             // 获取activity中setContentView布局的根布局
             ViewGroup contentView = (ViewGroup) activity.findViewById(android.R.id.content);
+            //方法一
             contentView.setPadding(0,getStatusBarHeight(activity),0,0);
+            //方法二
             // View activityView = contentView.getChildAt(0);
             // activityView.setFitsSystemWindows(true);
+            //方法三
             // activityView.setPadding(0,getStatusBarHeight(activity),0,0);
         }
     }
@@ -72,7 +71,7 @@ public class StatusBarUtil {
      * 设置activity全屏
      * @param activity
      */
-    public static void setStatusBarTranslucent(Activity activity){
+    public static void setActivityTranslucent(Activity activity){
         // 5.0 以上
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             // 这个怎么写有没有思路？看源码  29次
